@@ -12,4 +12,5 @@ Membuat simulasi perhitungan cicilan pinjaman/hutang selama beberapa bulan denga
 - Mode Cicilan Fluktuatif sesuai BI-Rate
 
 # Flowchart
-![flowchart revisi  MConverter eu](https://github.com/user-attachments/assets/cc633297-5c43-4b9d-8964-d81546bf3341) 
+![flowchart revisi (1)](https://github.com/user-attachments/assets/d3651077-5d75-414b-90e6-a37caf5aac2c) 
+ 
