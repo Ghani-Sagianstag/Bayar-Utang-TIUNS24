@@ -1,4 +1,4 @@
-![flowchart revisi  MConverter eu](https://github.com/user-attachments/assets/cc633297-5c43-4b9d-8964-d81546bf3341)# Kelompok 7, Kelas B
+# Kelompok 7, Kelas B
 1. I0324047 |Ghani Ziyad Sagiansyah 
 2. I0324049 |Inashofa Rosyidin 
 3. I0324066 |Safira Naafi Widyarani 
@@ -12,4 +12,4 @@ Membuat simulasi perhitungan cicilan pinjaman/hutang selama beberapa bulan denga
 - Mode Cicilan Fluktuatif sesuai BI-Rate
 
 # Flowchart
-
+![flowchart revisi  MConverter eu](https://github.com/user-attachments/assets/cc633297-5c43-4b9d-8964-d81546bf3341) 
