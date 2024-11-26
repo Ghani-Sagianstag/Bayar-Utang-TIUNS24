@@ -96,11 +96,11 @@ def admin_dashboard():
     for widget in window.winfo_children():
         widget.destroy()
 
-    label_title = tk.Label(window, text="Dashboard Admin", font=("Arial", 16))
+    label_title = tk.Label(window, text="Dashboard Admin", font=("Century Gothic", 16))
     label_title.pack(pady=20)
 
     # Listbox untuk menampilkan durasi yang tersedia
-    label_duration = tk.Label(window, text="Durasi Cicilan (bulan):")
+    label_duration = tk.Label(window, text="Durasi Cicilan (bulan):", font=("Century Gothic", 15))
     label_duration.pack(pady=10)
 
     listbox_durations = tk.Listbox(window, height=10)
@@ -137,13 +137,13 @@ def admin_dashboard():
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
-    button_add = tk.Button(window, text="Tambah Durasi", command=add_duration)
+    button_add = tk.Button(window, text="Tambah Durasi", font=("Century Gothic", 15), command=add_duration)
     button_add.pack(pady=5)
 
-    button_delete = tk.Button(window, text="Hapus Durasi", command=delete_duration)
+    button_delete = tk.Button(window, text="Hapus Durasi", font=("Century Gothic", 15), command=delete_duration)
     button_delete.pack(pady=5)
 
-    button_logout = tk.Button(window, text="Logout", command=login_screen)
+    button_logout = tk.Button(window, text="Logout", font=("Century Gothic", 15), command=login_screen)
     button_logout.pack(pady=10)
 
 # Fungsi untuk mengatur suku bunga admin
@@ -169,44 +169,44 @@ def user_dashboard(username):
     for widget in window.winfo_children():
         widget.destroy()
 
-    label_title = tk.Label(window, text="Dashboard User", font=("Arial", 16))
+    label_title = tk.Label(window, text="Dashboard User", font=("Century Gothic", 16))
     label_title.pack(pady=20)
 
-    label_loan_amount = tk.Label(window, text="Jumlah Pinjaman (Rp):")
+    label_loan_amount = tk.Label(window, text="Jumlah Pinjaman (Rp):", font=("Century Gothic", 15))
     label_loan_amount.pack(pady=10)
 
     entry_loan_amount = tk.Entry(window)
     entry_loan_amount.pack(pady=5)
 
     # Dropdown untuk pilihan durasi cicilan
-    label_loan_duration = tk.Label(window, text="Durasi Cicilan (bulan):")
+    label_loan_duration = tk.Label(window, text="Durasi Cicilan (bulan):", font=("Century Gothic", 15))
     label_loan_duration.pack(pady=10)
 
     duration_var = tk.IntVar(value=durations[0])  # Pilihan awal
     dropdown_duration = tk.OptionMenu(window, duration_var, *durations)
     dropdown_duration.pack(pady=5)
 
-    label_payment_mode = tk.Label(window, text="Pilih Mode Cicilan:")
+    label_payment_mode = tk.Label(window, text="Pilih Mode Cicilan:", font=("Century Gothic", 15))
     label_payment_mode.pack(pady=10)
 
     mode_var = tk.StringVar(value="fixed")
-    radio_fixed = tk.Radiobutton(window, text="Cicilan Tetap", variable=mode_var, value="fixed")
+    radio_fixed = tk.Radiobutton(window, text="Cicilan Tetap", font=("Century Gothic", 15), variable=mode_var, value="fixed")
     radio_fixed.pack()
 
-    radio_decreasing = tk.Radiobutton(window, text="Cicilan Menurun", variable=mode_var, value="decreasing")
+    radio_decreasing = tk.Radiobutton(window, text="Cicilan Menurun", font=("Century Gothic", 15), variable=mode_var, value="decreasing")
     radio_decreasing.pack()
 
-    radio_flexible = tk.Radiobutton(window, text="Cicilan Fluktuasi BI-Rate", variable=mode_var, value="flexible")
+    radio_flexible = tk.Radiobutton(window, text="Cicilan Fluktuasi BI-Rate", font=("Century Gothic", 15), variable=mode_var, value="flexible")
     radio_flexible.pack()
 
     button_calculate = tk.Button(
     window,
-    text="Hitung Cicilan",
+    text="Hitung Cicilan", font=("Century Gothic", 15),
     command=lambda: calculate_loan(entry_loan_amount, duration_var, mode_var.get())
     )
     button_calculate.pack(pady=20)
 
-    button_logout = tk.Button(window, text="Logout", command=login_screen)
+    button_logout = tk.Button(window, text="Logout", font=("Century Gothic", 15), command=login_screen)
     button_logout.pack(pady=10)
     
 # Fungsi untuk menghitung cicilan berdasarkan mode yang dipilih
@@ -231,7 +231,7 @@ def calculate_loan(loan_amount_entry, loan_duration_entry, mode):
         result_window.title("Hasil Cicilan")
         result_window.geometry("1000x1000")
 
-        label_result_title = tk.Label(result_window, text="Hasil Cicilan", font=("Arial", 16))
+        label_result_title = tk.Label(result_window, text="Hasil Cicilan", font=("Century Gothic", 16))
         label_result_title.pack(pady=10)
 
         text_result = tk.Text(result_window, height=20, width=50, state="normal")
@@ -248,16 +248,18 @@ def calculate_loan(loan_amount_entry, loan_duration_entry, mode):
         messagebox.showerror("Error", "Masukkan jumlah pinjaman dan durasi yang valid!")
 
 # Tampilan login
-# Tampilan login
 def login_screen():
     for widget in window.winfo_children():
         widget.destroy()
 
-    label_title = tk.Label(window, text="Login", font=("Times New Roman", 30))
+    label_title = tk.Label(window, text="Selamat Datang!!", font=("Century Gothic", 27))
     label_title.pack(pady=20)
 
-    label_username = tk.Label(window, text="Username:")
-    label_username.pack(pady=5)
+    label_title = tk.Label(window, text="Silahkan masukkan username dan password Anda", font=("Century Gothic", 15))
+    label_title.pack(pady=20) 
+    
+    label_username = tk.Label(window, text="Username:", font=("Century Gothic", 15))
+    label_username.pack(pady=15)
 
     global entry_username
     global entry_password
@@ -265,19 +267,19 @@ def login_screen():
     entry_username = tk.Entry(window)
     entry_username.pack(pady=5)
 
-    label_password = tk.Label(window, text="Password:")
+    label_password = tk.Label(window, text="Password:", font=("Century Gothic", 15))
     label_password.pack(pady=5)
 
     entry_password = tk.Entry(window, show="*")
     entry_password.pack(pady=5)
 
-    button_login = tk.Button(window, text="Login", command=login)
+    button_login = tk.Button(window, text="Login", font=("Century Gothic", 15), command=login)
     button_login.pack(pady=20)
 
-    label_signup_prompt = tk.Label(window, text="Apabila belum memiliki akun, silahkan Sign Up")
+    label_signup_prompt = tk.Label(window, text="Apabila belum memiliki akun, silahkan Sign Up", font=("Century Gothic", 15))
     label_signup_prompt.pack(pady=5)
 
-    button_to_signup = tk.Button(window, text="Sign Up", command=signup_screen)
+    button_to_signup = tk.Button(window, text="Sign Up", font=("Century Gothic", 15), command=signup_screen)
     button_to_signup.pack(pady=10)
 
 # Tampilan sign-up
@@ -285,10 +287,10 @@ def signup_screen():
     for widget in window.winfo_children():
         widget.destroy()
 
-    label_title = tk.Label(window, text="Sign Up", font=("Times New Roman", 30))
+    label_title = tk.Label(window, text="Silahkan buat akun terlebih dahulu", font=("Century Gothic", 20))
     label_title.pack(pady=20)
 
-    label_username = tk.Label(window, text="Username:")
+    label_username = tk.Label(window, text="Username:", font=("Century Gothic", 15))
     label_username.pack(pady=5)
 
     global entry_username
@@ -297,16 +299,16 @@ def signup_screen():
     entry_username = tk.Entry(window)
     entry_username.pack(pady=5)
 
-    label_password = tk.Label(window, text="Password:")
+    label_password = tk.Label(window, text="Password:", font=("Century Gothic", 15))
     label_password.pack(pady=5)
 
     entry_password = tk.Entry(window, show="*")
     entry_password.pack(pady=5)
 
-    button_signup = tk.Button(window, text="Sign Up", command=signup)
+    button_signup = tk.Button(window, text="Sign Up", font=("Century Gothic", 15), command=signup)
     button_signup.pack(pady=20)
 
-    button_to_login = tk.Button(window, text="Kembali ke Login", command=login_screen)
+    button_to_login = tk.Button(window, text="Kembali ke Login", font=("Century Gothic", 15), command=login_screen)
     button_to_login.pack(pady=10)
 
 def signup():
@@ -325,6 +327,7 @@ def signup():
 window = tk.Tk()
 window.title("Aplikasi Sistem Pembayaran Cicilan")
 window.geometry("1920x1080")
+window.configure(background="pink")
 
 
 def show_cover():
