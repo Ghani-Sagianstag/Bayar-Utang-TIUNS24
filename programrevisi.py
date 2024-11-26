@@ -118,7 +118,9 @@ def admin_dashboard():
             if new_duration not in durations:
                 durations.append(new_duration)
                 durations.sort()
-                listbox_durations.insert(tk.END, new_duration)
+                listbox_durations.delete(0, tk.END)
+                for dur in durations:
+                    listbox_durations.insert(tk.END, dur)
                 messagebox.showinfo("Berhasil", "Durasi berhasil ditambahkan!")
             else:
                 messagebox.showwarning("Gagal", "Durasi sudah ada!")
@@ -136,33 +138,35 @@ def admin_dashboard():
                 messagebox.showwarning("Gagal", "Pilih durasi yang ingin dihapus!")
         except Exception as e:
             messagebox.showerror("Error", str(e))
-
+            
     button_add = tk.Button(window, text="Tambah Durasi", font=("Century Gothic", 15), command=add_duration)
     button_add.pack(pady=5)
 
     button_delete = tk.Button(window, text="Hapus Durasi", font=("Century Gothic", 15), command=delete_duration)
     button_delete.pack(pady=5)
 
+    # Bagian untuk mengatur suku bunga
+    label_interest = tk.Label(window, text="Suku Bunga Saat Ini: {:.2f}%".format(interest_rate), font=("Century Gothic", 15))
+    label_interest.pack(pady=10)
+
+    entry_interest = tk.Entry(window)
+    entry_interest.pack(pady=5)
+
+    def update_interest():
+        global interest_rate
+        try:
+            new_interest = float(entry_interest.get())
+            interest_rate = new_interest
+            label_interest.config(text="Suku Bunga Saat Ini: {:.2f}%".format(interest_rate))
+            messagebox.showinfo("Berhasil", "Suku bunga berhasil diubah!")
+        except ValueError:
+            messagebox.showerror("Error", "Masukkan nilai suku bunga yang valid!")
+            
+    button_update_interest = tk.Button(window, text="Ubah Suku Bunga", font=("Century Gothic", 15), command=update_interest)
+    button_update_interest.pack(pady=10)
+
     button_logout = tk.Button(window, text="Logout", font=("Century Gothic", 15), command=login_screen)
     button_logout.pack(pady=10)
-
-# Fungsi untuk mengatur suku bunga admin
-def set_interest(entry):
-    global interest_rate
-    try:
-        interest_rate = float(entry.get())
-        messagebox.showinfo("Suku Bunga", f"Suku bunga berhasil diubah menjadi {interest_rate}%")
-    except ValueError:
-        messagebox.showerror("Error", "Masukkan nilai suku bunga yang valid!")
-
-# Fungsi untuk mengatur durasi cicilan admin
-def set_duration(entry):
-    global loan_duration
-    try:
-        loan_duration = int(entry.get())
-        messagebox.showinfo("Durasi Cicilan", f"Durasi cicilan berhasil diubah menjadi {loan_duration} bulan.")
-    except ValueError:
-        messagebox.showerror("Error", "Masukkan nilai durasi yang valid!")
 
 # Tampilan dashboard user
 def user_dashboard(username):
