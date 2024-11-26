@@ -337,7 +337,7 @@ window.configure(background="pink")
 def show_cover():
     try:
         # Gunakan raw string literal untuk mencegah error unicode escape
-        file_path = r"c:\Users\asus\AppData\Local\Temp\e2c9bc3f-ea44-4cd1-a9ee-323fa45026a1_Teks paragraf Anda (3840 x 2160 piksel) (3).zip.6a1\1.png"
+        file_path = r"c:\Users\asus\AppData\Local\Temp\aa6ea163-3991-4aaf-8390-b6e3728c5919_Teks paragraf Anda (3840 x 2160 piksel) (3).zip.919\1.png"
         background_image = Image.open(file_path)
         bg_photo = ImageTk.PhotoImage(background_image)
 
