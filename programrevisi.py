@@ -5,10 +5,6 @@ import json
 
 durations = [3, 6, 9, 12, 24, 36]  # Default pilihan durasi
 
-# Fungsi untuk menampilkan cover depan
-
-
-
 # Fungsi untuk menyimpan data pengguna ke dalam file JSON
 def save_user_data(username, password):
     users = load_users()
@@ -337,7 +333,7 @@ window.configure(background="pink")
 def show_cover():
     try:
         # Gunakan raw string literal untuk mencegah error unicode escape
-        file_path = r"c:\Users\asus\AppData\Local\Temp\aa6ea163-3991-4aaf-8390-b6e3728c5919_Teks paragraf Anda (3840 x 2160 piksel) (3).zip.919\1.png"
+        file_path = r"c:\Users\asus\AppData\Local\Temp\df5318df-7294-4ea9-b000-1636fb8cb8b0_Teks paragraf Anda (3840 x 2160 piksel) (3).zip.8b0\1.png"
         background_image = Image.open(file_path)
         bg_photo = ImageTk.PhotoImage(background_image)
 
