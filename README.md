@@ -46,4 +46,10 @@ b.	Jika pengguna memilih metode pembayaran cicilan menurun, maka ditetapkan angs
 
 c.	Jika pengguna tidak memilih metode pembayaran cicilan tetap dan menurun, otomatis pengguna akan diarahkan untuk menggunakan metode pembayaran cicilan fluktuatif sesuai BI-Rate. 
 
- 
+ # Flowchart Fix
+ ![flowchart](https://github.com/user-attachments/assets/49400acc-51d4-4943-b067-99c4f3c2c528)
+
+ # Sitemap
+ ![Yellow Minimalist Company Website Site Map](https://github.com/user-attachments/assets/7df39977-cb29-419f-a5f3-936e3c6eee84)
+
+
