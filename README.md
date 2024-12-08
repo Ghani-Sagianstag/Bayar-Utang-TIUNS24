@@ -3,13 +3,32 @@
 2. I0324049 | Inashofa Rosyidin (Inashofa)
 3. I0324066 | Safira Naafi Widyarani (Safira-bit)
 
-# Bayar-Utang-TIUNS24
-Membuat simulasi perhitungan cicilan pinjaman/hutang selama beberapa bulan dengan menghitung cicilan per bulan, bunga, serta saldo akhir pinjaman, hingga cicilan lunas.
+# Aplikasi Peminjaman Uang
+Aplikasi Peminjaman Uang Bank Santai adalah aplikasi sederhana yang dibuat untuk melakukan peminjaman uang secara mudah dan praktis. Aplikasi ini membuat simulasi cicilan yang harus dibayarkan per bulan sesuai dengan mode cicilan dan durasi cicilan yang dipilih oleh pengguna.
 
 # Fitur Program
-- Mode Cicilan Tetap
-- Mode Cicilan Menurun
-- Mode Cicilan Fluktuatif sesuai BI-Rate
+ **1. Admin**  
+- **Sistem Login**  
+  Fitur ini membuat keamanan data Bank Santai terjamin karena hanya admin yang memiliki akses khusus.  
+- **Pengelolaan Durasi Cicilan**  
+  Admin dapat menghapus durasi yang sudah ada maupun menambahkan durasi cicilan baru sesuai kebijakan yang ditetapkan Bank Santai.  
+- **Pengelolaan Suku Bunga**  
+  Admin dapat dengan mudah mengganti suku bunga berdasarkan BI Rate yang dapat berubah sewaktu-waktu.
+
+ **2. Pengguna**  
+- **Sistem Login dan Sign Up**  
+  Pengguna diminta untuk memasukkan username dan password bagi yang sudah memiliki akun. Jika pengguna belum memiliki akun, aplikasi akan mengarahkan untuk membuat akun terlebih dahulu.  
+- **Pengisian Nominal Pinjaman**  
+  Pengguna mengisikan nominal yang akan dipinjam dengan mengetikkan pada kolom yang tersedia.  
+- **Pemilihan Durasi Cicilan**  
+  Pengguna hanya dapat memilih durasi cicilan yang diisikan oleh admin.  
+- **Pemilihan Mode Cicilan**  
+  1. **Cicilan Tetap**  
+     Suku bunga yang digunakan adalah suku bunga tetap sebesar 5%. Cicilan ini memiliki jumlah pembayaran yang sama setiap bulan.  
+  2. **Cicilan Menurun**  
+     Mode ini menggunakan suku bunga tetap sebesar 5%. Jumlah pembayaran menurun setiap bulan karena bunga dihitung berdasarkan sisa pokok pinjaman.  
+  3. **Cicilan Fluktuasi BI-Rate**  
+     Suku bunga dalam mode cicilan ini berubah-ubah sesuai dengan nilai BI Rate yang diatur oleh admin. Namun, jumlah cicilannya sama setiap bulan.
 
 # Flowchart
 ![flowchart revisi](https://github.com/user-attachments/assets/ea231f45-94e6-430a-bb7f-3e0ec9b9a33e)
