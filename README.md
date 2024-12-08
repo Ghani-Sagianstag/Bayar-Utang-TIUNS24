@@ -6,7 +6,7 @@
 # Aplikasi Peminjaman Uang
 Aplikasi Peminjaman Uang Bank Santai adalah aplikasi sederhana yang dibuat untuk melakukan peminjaman uang secara mudah dan praktis. Aplikasi ini membuat simulasi cicilan yang harus dibayarkan per bulan sesuai dengan mode cicilan dan durasi cicilan yang dipilih oleh pengguna.
 
-# Fitur Program
+# Fitur Aplikasi
  **1. Admin**  
 - **Sistem Login**  
   Fitur ini membuat keamanan data Bank Santai terjamin karena hanya admin yang memiliki akses khusus.  
