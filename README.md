@@ -30,6 +30,10 @@ Aplikasi Peminjaman Uang Bank Santai adalah aplikasi sederhana yang dibuat untuk
   3. **Cicilan Fluktuasi BI-Rate**  
      Suku bunga dalam mode cicilan ini berubah-ubah sesuai dengan nilai BI Rate yang diatur oleh admin. Namun, jumlah cicilannya sama setiap bulan.
 
+# Library
+- Tkinter
+- Pillow
+- JSON
 # Flowchart
 ![flowchart revisi](https://github.com/user-attachments/assets/ea231f45-94e6-430a-bb7f-3e0ec9b9a33e)
 
@@ -48,6 +52,22 @@ c.	Jika pengguna tidak memilih metode pembayaran cicilan tetap dan menurun, otom
 
  # Flowchart Fix
  ![flowchart](https://github.com/user-attachments/assets/49400acc-51d4-4943-b067-99c4f3c2c528)
+
+ **Deskripsi Flowchart untuk Pengguna**
+1.	Ketika aplikasi dijalankan, pengguna akan diarahkan ke tampilan home.
+2.	Ketika menekan tombol “Masuk”, pengguna akan diarahkan ke halaman login. 
+    -	Bagi pengguna baru yang belum memiliki akun diarahkan ke halaman sign up untuk membuat username dan password baru dan otomatis beralih ke halaman login kembali untuk memasukkan username dan password yang sudah dibuat.
+    -	Bagi pengguna yang sudah memiliki akun langsung dapat memasukkan username dan password di halaman login.
+3.	Selanjutnya, pengguna dapat mengisikan nominal pinjaman, memilih durasi cicilan yang tersedia, dan memilih mode cicilan yang diinginkan.
+4.	Setelah menekan tombol “Hitung Cicilan”, pengguna akan diberikan pratinjau struk mengenai detail yang harus dibayarkan.
+5.	Saat pengguna menekan tombol “Simpan Sruk”, aplikasi otomatis menuju ke file explorer agar pengguna dapat menentukan dimana struk itu akan tersimpan di perangkatnya.
+6.	Setelah struk tersimpan, aplikasi beralih ke halaman “Terima Kasih” dan pengguna dapat kembali ke tampilan home dan dapat keluar dari aplikasi.
+
+**Deskripsi Flowchart untuk Admin**
+ 1.	Ketika aplikasi dijalankan, admin akan diarahkan ke tampilan home.
+2.	Ketika menekan tombol “Masuk”, admin akan diarahkan ke halaman login. Admin dapat memasukkan username sebagai “admin” dengan password “admin123” di halaman login.
+3.	Setelah berhasil login, admin dapat menambahkan atau menghapus durasi cicilan dan mengubah suku bunga berdasarkan BI Rate.
+4.	Ketika selesai, admin dapat logout yang menuju halaman login dan dapat kembali ke tampilan home untuk keluar dari aplikasi.
 
  # Sitemap
  ![Yellow Minimalist Company Website Site Map](https://github.com/user-attachments/assets/7df39977-cb29-419f-a5f3-936e3c6eee84)
