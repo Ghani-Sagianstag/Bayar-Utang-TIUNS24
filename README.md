@@ -1,5 +1,5 @@
 # Kelompok 7, Kelas B
-1. I0324047 | Ghani Ziyad Sagiansyah (Ghani-Sagianstag)
+1. I0324047 | Ghani Ziyad Sagiansyah (Ghani-Sagianstag) (Tidak berkontribusi)
 2. I0324049 | Inashofa Rosyidin (Inashofa)
 3. I0324066 | Safira Naafi Widyarani (Safira-bit)
 
@@ -34,6 +34,12 @@ Aplikasi Peminjaman Uang Bank Santai adalah aplikasi sederhana yang dibuat untuk
 - Tkinter
 - Pillow
 - JSON
+
+# Referensi Rumus
+- fixed: https://www.idntimes.com/business/economy/yogama-wisnu-oktyandito/cara-menghitung-bunga-pinjaman-dan-contohnya?page=all
+- decreasing: https://www.idntimes.com/business/economy/yogama-wisnu-oktyandito/cara-menghitung-bunga-pinjaman-dan-contohnya?page=all
+- flexible: https://biz.kompas.com/read/2023/07/27/184209528/sebelum-kredit-rumah-pahami-cara-hitung-cicilan-kpr-bunga-floating-and-fixed 
+  
 # Flowchart
 ![flowchart revisi](https://github.com/user-attachments/assets/ea231f45-94e6-430a-bb7f-3e0ec9b9a33e)
 
@@ -68,6 +74,12 @@ c.	Jika pengguna tidak memilih metode pembayaran cicilan tetap dan menurun, otom
 2.	Ketika menekan tombol “Masuk”, admin akan diarahkan ke halaman login. Admin dapat memasukkan username sebagai “admin” dengan password “admin123” di halaman login.
 3.	Setelah berhasil login, admin dapat menambahkan atau menghapus durasi cicilan dan mengubah suku bunga berdasarkan BI Rate.
 4.	Ketika selesai, admin dapat logout yang menuju halaman login dan dapat kembali ke tampilan home untuk keluar dari aplikasi.
+
+# Flowchart Revisi setelah Presentasi
+![flowchartfix rev](https://github.com/user-attachments/assets/3ac90487-52d9-4873-81e7-70b0ad4238ed)
+**Tambahan Fitur**
+1. Riwayat pinjaman seluruh pengguna bagi Admin
+2. Riwayat pinjaman pengguna itu sendiri bagi Pengguna
 
  # Sitemap
  ![Yellow Minimalist Company Website Site Map](https://github.com/user-attachments/assets/7df39977-cb29-419f-a5f3-936e3c6eee84)
