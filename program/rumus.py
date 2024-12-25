@@ -2,25 +2,37 @@ import json
 
 # Logika Perhitungan
 def calculate_fixed_payment(principal, months, interest_rate):
-    interest = principal * (interest_rate / 100)
-    total_payment = principal + interest
-    monthly_payment = total_payment / months
+    monthly_principal = principal / months
+    total_interest = principal * (interest_rate / 100)
+    monthly_interest = total_interest / months
+    monthly_payment = monthly_principal + monthly_interest
     return monthly_payment
 
 def calculate_decreasing_payment(principal, months, interest_rate):
-    monthly_payments = []
+    monthly_payments = []  # List untuk menyimpan cicilan tiap bulan
+    monthly_principal = principal / months  # Cicilan pokok tetap setiap bulan
+    monthly_interest_rate = interest_rate / 12 / 100  # Konversi bunga tahunan ke bulanan
+
     for month in range(1, months + 1):
-        interest = (principal - (principal / months) * (month - 1)) * (interest_rate / 100)
-        monthly_payment = (principal / months) + interest
+        # Sisa pokok pinjaman
+        remaining_principal = principal - (monthly_principal * (month - 1))
+        # Bunga bulan ini
+        interest = remaining_principal * monthly_interest_rate
+        # Total cicilan bulan ini
+        monthly_payment = monthly_principal + interest
+        # Tambahkan ke daftar
         monthly_payments.append(monthly_payment)
+    
     return monthly_payments
 
 def calculate_flexible_payment(principal, months):
     bi_rate = load_bi_rate()  # Ambil BI Rate terbaru dari file
     monthly_payments = []
     for month in range(1, months + 1):
-        interest = principal * (bi_rate / 100)
-        monthly_payment = (principal / months) + interest
+        monthly_principal = principal / months
+        total_interest = principal * (bi_rate / 100)
+        monthly_interest = total_interest / months
+        monthly_payment = monthly_principal + monthly_interest
         monthly_payments.append(monthly_payment)
     return monthly_payments
 
@@ -33,8 +45,9 @@ def load_bi_rate():
         with open('bi_rate.json', 'r') as f:
             return json.load(f).get("bi_rate", 6)  # Default BI Rate adalah 6 jika file tidak ada
     except FileNotFoundError:
+        save_bi_rate(6)  # Simpan BI Rate default jika file tidak ditemukan
         return 6
-    
+
 def save_durations(durations):
     with open('durations.json', 'w') as f:
         json.dump(durations, f)
@@ -45,7 +58,6 @@ def load_durations():
             return json.load(f)
     except FileNotFoundError:
         return [3, 6, 9, 12, 24, 36]  # Default durasi jika file tidak ada
-
 
 # Fungsi Pengelolaan Data
 def save_user_data(username, password):
@@ -82,7 +94,7 @@ def safe_float(value):
         return float(value)
     except ValueError:
         return 0.0
-    
+
 def save_installment_data(username, loan_amount, loan_duration, monthly_payments, mode):
     try:
         # Struktur data yang akan disimpan
