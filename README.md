@@ -84,4 +84,6 @@ c.	Jika pengguna tidak memilih metode pembayaran cicilan tetap dan menurun, otom
  # Sitemap
  ![Yellow Minimalist Company Website Site Map](https://github.com/user-attachments/assets/7df39977-cb29-419f-a5f3-936e3c6eee84)
 
+# Sitemap Revisi setelah Presentasi
+![Yellow Minimalist Company Website Site Map (1200 x 1000 piksel)](https://github.com/user-attachments/assets/098e20e1-a069-4874-bd1b-1bf5af007ca5)
 
